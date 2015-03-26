@@ -88,9 +88,9 @@ public class Account{
 	}
 	//a method name withdraw return a new balance 
 	public double withdraw(double minus){
-		transaction.settype('W');
-		transaction.add(transaction.gettype());
 		balance -= minus;
+		transaction.add(new Transaction('W',minus,balance,T.getdescription()));
+		System.out.println(toString() + T.getdescription());
 		return balance;
 	}
 	//a method name deposit return a new balance 
