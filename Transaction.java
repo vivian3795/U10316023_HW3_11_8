@@ -34,7 +34,9 @@ public class Transaction {
 		return balance;
 	}
 	public String getdescription() {
-		return description;
+		//the description of this transaction
+		return "time : "+ getdate()+"\ntype : "+gettype()+
+		"\namount : "+getamount() +"\nbalance : "+getbalance();
 	}
 	public java.util.Date getdate(){
 		return date;
@@ -53,5 +55,9 @@ public class Transaction {
 	public void setdescription(String description) {
 		this.description = description;
 	}
-
+	
+	//a toString method which will be use by ArrayList<Transaction>
+	public String toString(){
+		return "\ndescription\n"+getdescription();
+	}
 }
