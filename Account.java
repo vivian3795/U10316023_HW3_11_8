@@ -88,6 +88,8 @@ public class Account{
 	}
 	//a method name withdraw return a new balance 
 	public double withdraw(double minus){
+		transaction.settype('W');
+		transaction.add(transaction.gettype());
 		balance -= minus;
 		return balance;
 	}
