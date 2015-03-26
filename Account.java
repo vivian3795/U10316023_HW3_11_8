@@ -4,7 +4,7 @@
  * Information: 
  *		Account class was designed with the requirements on page 357&496
  */
-
+import java.util.ArrayList;
 public class Account{
 	//data field
 	//add new data field name of String type to store the name of the customer
