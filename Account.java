@@ -2,9 +2,9 @@
  * ID: U10316023
  * Ex: 11.8 
  * Information: 
- *		Account class was designed with the requirements on page 357
+ *		Account class was designed with the requirements on page 357 & 469
  */
- import java.util.ArrayList;
+import java.util.ArrayList;
 public class Account{
 	//data field
 	//add new data field name of String type to store the name of the customer
@@ -88,19 +88,23 @@ public class Account{
 	}
 	//a method name withdraw return a new balance 
 	public double withdraw(double minus){
+		//print account's data first
 		System.out.println(toString());
 		balance -= minus;
 		transaction.add(new Transaction('W',minus,balance,""));
 		for(Transaction w : transaction)
+			//then print after withdraw,the account's data 
 			System.out.println(w);
 		return balance;
 	}
 	//a method name deposit return a new balance 
 	public double deposit(double plus){
+		//print account's data first
 		System.out.println(toString());
 		balance += plus;
 		transaction.add(new Transaction('D',plus,balance,""));
 		for(Transaction d :transaction)
+			//then print after deposit,the account's data 
 			System.out.println(d);
 		return balance;
 	}
